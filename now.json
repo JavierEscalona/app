@@ -1,1 +1,2 @@
-{}
+{script {
+start : "npm run dev"}}
