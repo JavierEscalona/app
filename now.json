@@ -1,2 +1,2 @@
-{script {
-start : "npm run dev"}}
+{"scripts": {
+"start" : "npm run dev"}}
