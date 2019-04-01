@@ -33,7 +33,6 @@ export default class extends React.Component {
  
  render() {
     return <Layout title="Productos">
-     <h1>Latest News</h1>
       <User {...this.props.user}>
        
       </User>
