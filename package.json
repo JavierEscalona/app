@@ -4,6 +4,7 @@
   "description": "",
   "main": "pages/index.js",
   "scripts": {
+    "now-build": "next build && next export -o dist",
     "dev": "next",
     "start": "next start",
     "build": "next build"
