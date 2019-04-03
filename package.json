@@ -2,9 +2,9 @@
   "name": "app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "pages/index.js",
   "scripts": {
-    "dev": "npm run dev",
+    "dev": "next",
     "start": "next start",
     "build": "next build"
   },
