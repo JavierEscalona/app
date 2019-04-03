@@ -3,7 +3,7 @@
   "name":"nextjs-app",
   "builds":
         [
-          {"src":"/pages/index.js",
+          {"src":"package.json",
            "use":"@now/next"}
         ],
    "routes":
