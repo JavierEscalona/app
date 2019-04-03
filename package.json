@@ -2,12 +2,10 @@
   "name": "app",
   "version": "1.0.0",
   "description": "",
-  "main": "pages/index.js",
   "scripts": {
-    "now-build": "next build && next export -o dist",
+    "build": "next build",
     "dev": "next",
-    "start": "next start",
-    "build": "next build"
+    "now-build": "next build"
   },
   "keywords": [],
   "author": "",
