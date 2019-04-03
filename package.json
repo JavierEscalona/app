@@ -15,6 +15,7 @@
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
     "next": "^8.0.3",
+    "now": "^15.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "request": "^2.88.0"
