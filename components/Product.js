@@ -8,40 +8,59 @@ export default ({_id,name,cost,img,puntos})=>{
     return(
        
         <div className="cajas" key={ _id } onMouseMove={()=>{console.log("muse meon")}}>
+        <span className="disponibilidad" ><img src='../static/icons/buy-blue.svg'/></span>
+        
          <h2><a href="#">{ name }</a></h2>
          
-         <img src={ img.url }/>
+         <img className="cajas_img" src={ img.url }/>
          
-         <p className="costo_puntos">
-         <img src='../static/icons/coin.svg'></img> { cost } puntos
-        </p>
+         <div className="coin_pts">
+         <span ><img src='../static/icons/coin.svg'/></span> <span>{ cost } puntos</span>
+        </div>
          <ButtonRedeem cost={cost} puntos={puntos} _id={_id}></ButtonRedeem>
          
          <style jsx>{`
-          .cajas img{
+          .disponibilidad{
+            position: absulte;
+            top: 0;
+            right: 0;
+            float: right;
+            padding: 5px;
+          }
+          .disponibilidad img{
+            width: 30px;
+            height:30px;
+
+          }
+          .coin_pts{
+          }
+          .coin_pts img{
+            height: 24px;
+            vertical-align: middle;
+          }
+          .cajas_img{
             width:100%;
           }
           .costo_puntos{
             
               font-size: 22px;
-            color: black;  
+              color: black;  
           }
           .costo_puntos img{
-            box-sizing: border-box;
             height: 30px;
           }
 
          .cajas{ 
-             float: left;
-       width: calc(24% - 40px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-       height: auto;
-  margin: 20px;
-    text-align: center;
-    font-family: arial;
-    
-    }
+            float: left;
+            width: calc(24% - 40px);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            height: auto;
+            margin: 20px;
+            text-align: center;
+            font-family: arial;
+            transition: .4s ease;
+        }
 
 
     .comprar{
@@ -56,7 +75,9 @@ export default ({_id,name,cost,img,puntos})=>{
      align-items: center;
      justify-content: center;
    }
-
+ .cajas:hover{
+  box-shadow: 6px 6px 10px rgba(0,0,0,.4);
+ }
    .detalle{
        margin: 24px 0;
    }

@@ -1,0 +1,14 @@
+{
+  "version":2,
+  "name":"nextjs-app",
+  "builds":
+        [
+          {"src":"package.json",
+           "use":"@now/next"}
+        ],
+   "routes":
+        [
+          {"src":"/pages/(.*)",
+           "dest":"/pages/$1"}
+        ]
+}

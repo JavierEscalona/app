@@ -1,12 +1,11 @@
 {
-  "name": "app",
+  "name": "app-",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "build": "next build",
     "dev": "next",
-    "start": "next start",
-    "build": "next build"
+    "now-build": "next build"
   },
   "keywords": [],
   "author": "",
