@@ -40,7 +40,7 @@ export default class extends React.Component {
       
          <button ><Link prefetch href="/history">Historial de compras</Link></button>
         <div className="contenedor_sort_by">
-        <span>Ordenar por: </span> 
+        <span className="leyeda_sortby">Ordenar por: </span> 
         <span className="sort_by" onClick={() => this.OrdenarPorPrecioAsc(this.props.products,'cost')}>Menor precio</span>
         <span className="sort_by" onClick={() => this.OrdenarPorPrecioDesc(this.props.products,'cost')}>Mayor precio</span></div>
 
@@ -52,25 +52,30 @@ export default class extends React.Component {
      )) }
 
     <style jsx>{`
+    .leyeda_sortby{
+    font-family: Helvetica; 
+    font-weight: bold;
+
+    }
       .contenedor_sort_by{
         width: 100%;
-        height: 80px;
-        padding: 10px;
+        height: 30px;
+        padding: 15px;
         /*text-align: center;*/
       }
    .sort_by{
     font-weight: bold;
     padding:10px;
     margin: 10;
-    background-color: blue;
+    background-color: #d2d2c6;
     border-radius: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    color: #fff;
+    color: #292929;
     font-family: Helvetica; 
    }
 .sort_by:hover{
-    background-color: yellow;
+    background-color: #FCAF62;
     cursor: pointer;
    }
 button {

@@ -5,11 +5,21 @@ export default ({cost,puntos,_id})=>{
    
     return(
 
-        <p><Link prefetch href={ `/redeem?id=${_id}` }><a className="comprar"><button>
-             {calcularPuntos(cost,puntos)}</button></a></Link>
+       <span className="span_redeem"> <Link prefetch href={ `/redeem?id=${_id}` }><a className="comprar">
+             {calcularPuntos(cost,puntos)}</a></Link>
         <style jsx>{`
+        .span_redeem{
+            position: relative;
+            height: -webkit-fill-available;
+            width: -webkit-fill-available;
+            float: left;    
+        }
         .comprar{
-                opacity: 0;
+            opacity: 0;
+            position: inherit;
+            float: left;
+            height: inherit;
+            width: inherit;
         }
                 .comprar:hover{
                 opacity: 1;
@@ -40,7 +50,8 @@ export default ({cost,puntos,_id})=>{
             }
         `}</style>
 
-</p>
+
+</span>
 
     )
 }

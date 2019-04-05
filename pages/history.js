@@ -33,20 +33,48 @@ export default class extends React.Component {
  
  render() {
     return <Layout title="Productos">
+
       <User {...this.props.user}>
        
       </User>
-      <Link prefetch href="/history"><a>
-           Historial de compras
-         </a></Link>
-        <button onClick={() => this.OrdenarPorPrecioAsc(this.props.products,'cost')}>Menor precio</button>
-        <button onClick={() => this.OrdenarPorPrecioDesc(this.props.products,'cost')}>Mayor precio</button>
+         <button ><Link prefetch href="/">Ir al inicio</Link></button>
+        <div className="contenedor_sort_by">
+        <span className="leyeda_sortby">Ordenar por: </span> 
+        <span className="sort_by" onClick={() => this.OrdenarPorPrecioAsc(this.props.products,'cost')}>Menor precio</span>
+        <span className="sort_by" onClick={() => this.OrdenarPorPrecioDesc(this.props.products,'cost')}>Mayor precio</span></div>
+
      { this.props.products.map((product) => (
        
       <Product puntos={this.props.user.points} {...product}/>
      )) }
 
     <style jsx>{`
+    .leyeda_sortby{
+      font-family: Helvetica; 
+      font-weight: bold;
+  
+      }
+        .contenedor_sort_by{
+          width: 100%;
+          height: 30px;
+          padding: 15px;
+          /*text-align: center;*/
+        }
+     .sort_by{
+      font-weight: bold;
+      padding:10px;
+      margin: 10;
+      background-color: #d2d2c6;
+      border-radius: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+      color: #292929;
+      font-family: Helvetica; 
+     }
+  .sort_by:hover{
+      background-color: #FCAF62;
+      cursor: pointer;
+     }
        .cajas{
    	    float: left;
  	width: calc(33% - 40px);

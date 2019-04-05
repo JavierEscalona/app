@@ -8,18 +8,57 @@ export default ({_id,name,cost,img,puntos})=>{
     return(
        
         <div className="cajas" key={ _id } onMouseMove={()=>{console.log("muse meon")}}>
-        <span className="disponibilidad" ><img src='../static/icons/buy-blue.svg'/></span>
+        {()=>{
+     return  <span className="disponibilidad" ><img src='../static/icons/buy-blue.svg'/></span>
+
+        }}
+        <div className="Nodisponible">
+         <span><img src='../static/icons/coin.svg'/></span>
+         <span>Necesitas 50 puntos</span>
+        </div>
         
-         <h2><a href="#">{ name }</a></h2>
-         
+    
+        <div className="botton_redeem">
+         <ButtonRedeem cost={cost} puntos={puntos} _id={_id}></ButtonRedeem>
+         </div> 
          <img className="cajas_img" src={ img.url }/>
-         
+         <div className="nombre_producto"><a href="#">{ name }</a></div>
          <div className="coin_pts">
          <span ><img src='../static/icons/coin.svg'/></span> <span>{ cost } puntos</span>
         </div>
-         <ButtonRedeem cost={cost} puntos={puntos} _id={_id}></ButtonRedeem>
-         
+        <button>hola pepe</button>
          <style jsx>{`
+
+         .botton_redeem{
+           position: absolute;
+           z-index: 2;
+           height: 90%;
+           width: 100%;
+         }
+
+         .botton_redeem:hover {
+           backgorund-color: black;
+         }
+         .nombre_producto{
+          padding: 5px;
+         }
+         .Nodisponible{
+          background-color: rgba(134 , 134, 114 , 0.5);
+          border-radius: 20px;
+          text-align: center;
+          position: absulte;
+          top: 0;
+          right: 0;
+          float: right;
+          padding: 5px;
+          position: absolute;
+         }
+         .Nodisponible img{
+          width: 30px;
+          height:30px;
+          align: center;
+          
+         }
           .disponibilidad{
             position: absulte;
             top: 0;
@@ -33,6 +72,7 @@ export default ({_id,name,cost,img,puntos})=>{
 
           }
           .coin_pts{
+            padding 5px;
           }
           .coin_pts img{
             height: 24px;
@@ -60,6 +100,7 @@ export default ({_id,name,cost,img,puntos})=>{
             text-align: center;
             font-family: arial;
             transition: .4s ease;
+            position: relative;
         }
 
 
@@ -68,7 +109,7 @@ export default ({_id,name,cost,img,puntos})=>{
     }
     .comprar:hover{
       opacity: 1;
-      content: 'Comprar fahora';
+      
     }
      .con-cajas{
      display: flex;

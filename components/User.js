@@ -5,7 +5,7 @@ export default ({name,points})=>{
     return(
         <div className="menu">
         <h3>{name}</h3>
-        <p>Puntos: {points}</p>
+        <p><img src="../static/icons/coin.svg"/> {points}</p>
 
       
          <style jsx>{`
@@ -25,22 +25,22 @@ export default ({name,points})=>{
      align-items: center;
      justify-content: center;
    }
-   img{
-       width:100%;
-   }
+  .menu img{
+    height: 24px;
+    vertical-align: middle;
+  }
    .detalle{
        margin: 24px 0;
    }
    .menu{
       font-family:verdana,arial;  
-              font-size:11pt;  
-              text-align:center;  
-              padding: 10px 5px 10px 5px;    /* margen con valores: arriba - derecha - abajo - izquierda */   
-              top: 0px;                    /* Distancia hasta el borde superior */  
+      font-size:11pt;  
+      text-align:center;  
+      padding: 10px 5px 10px 5px;    /* margen con valores: arriba - derecha - abajo - izquierda */   
+      top: 0px;                    /* Distancia hasta el borde superior */  
       left: 0px;            /* Distancia hasta el borde izquierdo */ 
-          width:100%;  
-          background-color:#FCAF62;   
-          z-index: 1;               /* hace que la capa sea opaca  */  
+      background-color:#d2d2c6;   
+      z-index: 1;               /* hace que la capa sea opaca  */  
    }
    .card {
        float:right;
@@ -78,9 +78,7 @@ export default ({name,points})=>{
     color: black;
   }
   
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
+
         `}</style>
 
 </div>
